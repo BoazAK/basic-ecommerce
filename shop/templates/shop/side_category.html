@@ -1,0 +1,10 @@
+{% url 'shop:index' as home %}
+{% url 'shop:categorydetail' as categorydetail %}
+
+
+    {% if category_list %}
+            <a href="{% url 'shop:index' %}" class="list-group-item{% if request.path == home %} active{% else %}{% endif %}">Tous les produits</a>
+        {% for category in category_list %}
+            <a href="{% url 'shop:categorydetail' category.id %}" class="list-group-item{% if category.id == product.category.id %} active{% else %}{% endif %}">{{ category.category_text }}</a>
+        {% endfor %}
+    {% endif%}

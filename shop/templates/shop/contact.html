@@ -1,0 +1,11 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+    <form action="{% url 'shop:contact' %}" method="post">
+        <table>
+            {{ form }}
+        </table>
+        {% csrf_token %}
+        <button class="btn btn-success" type="submit">Contact</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,46 @@
+Admin Side :
+- Products list                                             OK
+- Filter products by disponiblity and Category              OK
+- Products Category                                         OK
+- Creation off new Category                                 OK
+- Creation off new products                                 OK
+- Image uploads                                             OK
+- Set Publicities                                           OK
+- Filter Publicities by disponiblity                        OK
+- Contacts recieved list                                    OK
+- Set Contacts read                                         OK
+- About page                                                OK
+- Product views                                             OK
+- Count of web site views                                   OK
+- Count of clic on buy link                                 OK
+- Count of clic on buy link by day                          OK
+- Site views by day                                         OK
+- Admin restructuration for apps                            OK
+- RichTextField for about and product description           OK
+
+
+- Admin Page customisation
+
+- Answer to Contacts by email
+- Ratio clic on buy link / web site view
+
+
+User side :
+- Send Contacts                                             OK
+- Contacts page                                             OK
+- About page                                                OK
+- Publicities                                               OK
+- Link for navigation                                       OK
+- Products list with customise link                         OK
+- Detail off product                                        OK
+- Product list by Category                                  OK
+- Search                                                    OK
+- Errors pages                                              OK                      but side bar and publicities doesn't appear
+- Navigation active (Nav Bar)                               OK
+- Buy button with link to whatsapp                          OK
+
+
+
+- Product name in url
+- Active Category select for list by Category (Side Bar)    
+- Share on social network

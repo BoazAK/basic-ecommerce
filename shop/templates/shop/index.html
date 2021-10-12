@@ -1,0 +1,26 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+    {% if latest_product_list %}
+        {% for product in latest_product_list %}
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <a href="{% url 'shop:detail' product.id %}"><img class="card-img-top" src="/static/shop/vendor/img/{{ product.product_image }}" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                        <a href="{% url 'shop:detail' product.id %}">{{ product.product_name }}</a>
+                        </h4>
+                        <h5>{{ product.product_price }}</h5>
+                        <p class="card-text">{{ product.product_description | safe }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                        <a href="{% url 'shop:categorydetail' product.category.id %}">{{ product.category }}</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p class="card-text">No products are available.</p>
+    {% endif %}
+{% endblock %}

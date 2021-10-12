@@ -1,0 +1,26 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+            <div class="col-lg-9">
+
+                <div class="card mt-4">
+                  <img class="card-img-top" src="/static/shop/vendor/img/{{ product.product_image }}" alt="">
+                  <div class="card-body">
+                    <h3 class="card-title">{{ product.product_name }}</h3>
+                    <h4>{{ product.product_price }}</h4>
+                    <p class="card-text">{{ product.product_description | safe }}</p>
+                    <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+                    4.0 stars <a href="{% url 'shop:categorydetail' product.category.id %}">{{ product.category }}</a>
+                  </div>
+                    <div class="card-body">
+                        <form method="post">
+                          {% csrf_token %}
+                          <button class="btn btn-success" type="submit">Acheter</button>
+                      </form>
+                    </div>
+                </div>
+                <!-- /.card -->
+                <br>
+            </div>
+              <!-- /.col-lg-9 -->
+{% endblock %}

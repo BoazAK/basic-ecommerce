@@ -1,0 +1,81 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Shop Homepage - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'shop/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'shop/css/shop-homepage.css' %}" rel="stylesheet">
+
+  <link rel="shortcut icon" href="{% static 'shop/vendor/img/favicon.png' %}">
+
+  <link rel="stylesheet" href="{% static 'shop/fontawesome/css/all.min.css' %}">
+
+</head>
+
+<body>
+
+  {% include 'shop/nav.html' %}
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-3">
+
+        <h1 class="my-4">Liste des catégories</h1>
+        <div class="list-group">
+          {% include 'shop/side_category.html' %}
+        </div>
+        <br /><br />
+
+      </div>
+      <!-- /.col-lg-3 -->
+
+      <div class="col-lg-9">
+
+        {% include 'shop/publicity.html' %}
+
+        <div class="row">
+
+            {% block content %}{% endblock %}
+
+        </div>
+        <!-- /.row -->
+
+      </div>
+      <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright <a href="/choice" class="href" target="_blank">&copy;</a> Your Website 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'shop/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'shop/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+            <div class="col-lg-9">
+
+                <div class="card mt-4">
+                  <div class="card-body">
+                    {% if about_list %}
+                      {% for about in about_list %}
+                    <p class="card-text">{{ about.about_text | safe }}</p>
+                      {% endfor %}
+                    {% endif %}
+                  </div>
+                </div>
+                <!-- /.card -->
+                <br>
+              </div>
+              <!-- /.col-lg-9 -->
+{% endblock %}
